@@ -1,6 +1,6 @@
 <template>
   <div v-if="$route.params.id === 'pepsico'">
-    <img src="../assets/images/pepsico/1.webp" alt="pepsico" style="float: right;margin-left: 30px;">
+    <img src="../assets/images/pepsico/1.webp" alt="pepsico" style="float: right;margin-left: 30px">
     <p>Not all projects that seem cool always reach the audience.</p>
     <p>
       The brand asked to create a project where the <span class="second-font">packaging</span> of
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import VideoCard from "@/components/VideoCard.vue";
+import VideoCard from '@/components/VideoCard.vue';
 
 export default {
   created() {

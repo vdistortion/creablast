@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import ProjectCard from "@/components/ProjectCard.vue";
+import ProjectCard from '@/components/ProjectCard.vue';
 
 document.title = `WORK — ${import.meta.env.VITE_SITE_NAME}`;
 </script>

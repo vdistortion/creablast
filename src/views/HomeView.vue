@@ -10,8 +10,8 @@
       </router-link>
     </p>
     <p>
-      I have a <span class="second-font">unique & effective</span> style of work. Extensive experience
-      in digital: from <span class="second-font">social media</span> to
+      I have a <span class="second-font">unique & effective</span> style of work. Extensive
+      experience in digital: from <span class="second-font">social media</span> to
       <span class="second-font">special projects</span>
     </p>
     <p>
@@ -26,8 +26,8 @@
 </template>
 
 <script setup>
-import AppBrands from "@/components/AppBrands.vue";
-import AppContact from "@/components/AppContact.vue";
+import AppBrands from '@/components/AppBrands.vue';
+import AppContact from '@/components/AppContact.vue';
 
 document.title = `MAIN — ${import.meta.env.VITE_SITE_NAME}`;
 </script>

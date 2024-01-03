@@ -46,7 +46,7 @@
 </template>
 
 <script setup>
-import AppContact from "@/components/AppContact.vue";
+import AppContact from '@/components/AppContact.vue';
 
 document.title = `ABOUT US — ${import.meta.env.VITE_SITE_NAME}`;
 </script>
