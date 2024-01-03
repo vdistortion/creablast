@@ -1,7 +1,7 @@
 <template>
   <main class="about-page">
     <div class="about-page__item">
-      <img src="../assets/images/about.webp" alt="Enesha">
+      <img src="/images/about.webp" alt="Enesha">
     </div>
     <div class="about-page__item">
       <p>
@@ -47,8 +47,9 @@
 
 <script setup>
 import AppContact from '@/components/AppContact.vue';
+import { setPageTitle } from '@/utils/helpers';
 
-document.title = `ABOUT US — ${import.meta.env.VITE_SITE_NAME}`;
+setPageTitle(import.meta.env.VITE_PAGE_NAME_ABOUT);
 </script>
 
 <style lang="stylus">

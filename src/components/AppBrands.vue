@@ -1,34 +1,34 @@
 <template>
   <div class="brands">
     <div class="brands__item">
-      <img src="../assets/images/brands/jbl.webp" alt="jbl">
+      <img src="/images/brands/jbl.webp" alt="jbl">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/google.webp" alt="google">
+      <img src="/images/brands/google.webp" alt="google">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/haval.webp" alt="haval">
+      <img src="/images/brands/haval.webp" alt="haval">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/kia.webp" alt="kia">
+      <img src="/images/brands/kia.webp" alt="kia">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/ozon.webp" alt="ozon">
+      <img src="/images/brands/ozon.webp" alt="ozon">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/luntik.webp" alt="luntik">
+      <img src="/images/brands/luntik.webp" alt="luntik">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/perfetti.webp" alt="perfetti">
+      <img src="/images/brands/perfetti.webp" alt="perfetti">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/abbott.webp" alt="abbott">
+      <img src="/images/brands/abbott.webp" alt="abbott">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/squishmallows.webp" alt="squishmallows">
+      <img src="/images/brands/squishmallows.webp" alt="squishmallows">
     </div>
     <div class="brands__item">
-      <img src="../assets/images/brands/pepsico.webp" alt="pepsico">
+      <img src="/images/brands/pepsico.webp" alt="pepsico">
     </div>
   </div>
 </template>

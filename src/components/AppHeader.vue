@@ -2,21 +2,28 @@
   <header class="header">
     <ul class="header__menu">
       <li>
-        <span v-if="$route.name === 'home'">Main</span>
-        <router-link v-else to="/">Main</router-link>
+        <span v-if="$route.name === 'home'">{{ pageNameMain }}</span>
+        <router-link v-else to="/">{{ pageNameMain }}</router-link>
       </li>
       <li>
-        <span v-if="$route.name === 'work'">Work</span>
-        <router-link v-else to="/work">Work</router-link>
+        <span v-if="$route.name === 'work'">{{ pageNameWork }}</span>
+        <router-link v-else to="/work">{{ pageNameWork }}</router-link>
       </li>
       <li>
-        <span v-if="$route.name === 'about'">About us</span>
-        <router-link v-else to="/about">About us</router-link>
+        <span v-if="$route.name === 'about'">{{ pageNameAbout }}</span>
+        <router-link v-else to="/about">{{ pageNameAbout }}</router-link>
       </li>
     </ul>
-    <h1 class="header__name">Enesha</h1>
+    <h1 class="header__name">{{ siteName }}</h1>
   </header>
 </template>
+
+<script setup>
+const siteName = import.meta.env.VITE_SITE_NAME;
+const pageNameMain = import.meta.env.VITE_PAGE_NAME_MAIN;
+const pageNameWork = import.meta.env.VITE_PAGE_NAME_WORK;
+const pageNameAbout = import.meta.env.VITE_PAGE_NAME_ABOUT;
+</script>
 
 <style lang="stylus">
 .header

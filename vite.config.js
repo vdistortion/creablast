@@ -4,11 +4,11 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 
 export default defineConfig({
-  base: '/creablast/',
   plugins: [
     vue(),
   ],
   resolve: {
+    dedupe: ['vue'],
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
@@ -17,8 +17,8 @@ export default defineConfig({
     preprocessorOptions: {
       stylus: {
         imports: [
-          resolve('src/assets/styles/smartgrid.styl'),
-          resolve('src/assets/styles/variables.styl'),
+          resolve('src/assets/variables.styl'),
+          resolve('src/assets/smartgrid.styl'),
         ],
       },
     },

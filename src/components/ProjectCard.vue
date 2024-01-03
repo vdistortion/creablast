@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <router-link :to="`/work/${name}`">
-      <img :src="src" :alt="name">
+      <img :src="`/images/projects/${image}`" :alt="name">
     </router-link>
     <div class="card__description">{{ description }}</div>
     <router-link :to="`/work/${name}`">{{ link }}</router-link>
@@ -26,12 +26,6 @@ export default {
     link: {
       type: String,
       required: true,
-    },
-  },
-
-  computed: {
-    src() {
-      return new URL(`../assets/images/projects/${this.image}`, import.meta.url).href;
     },
   },
 };

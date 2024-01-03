@@ -120,7 +120,7 @@ export default {
     padding-left 30px
     height 27px
     line-height 30px
-    background-image url('../assets/images/gift.svg')
+    background-image url('/images/gift.svg')
     background-repeat no-repeat
     background-size 25px 27px
     font-size 15px

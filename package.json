@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "grid": "node smartgrid.js",
-    "public": "npm run build && gh-pages -d dist --nojekyll"
+    "public": "npm run build && gh-pages -d dist --nojekyll --cname creablast.ru"
   },
   "dependencies": {
     "pinia": "^2.1.7",

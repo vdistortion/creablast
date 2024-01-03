@@ -52,8 +52,9 @@
 
 <script setup>
 import ProjectCard from '@/components/ProjectCard.vue';
+import { setPageTitle } from '@/utils/helpers';
 
-document.title = `WORK — ${import.meta.env.VITE_SITE_NAME}`;
+setPageTitle(import.meta.env.VITE_PAGE_NAME_WORK);
 </script>
 
 <style lang="stylus">

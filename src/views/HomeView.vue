@@ -1,18 +1,21 @@
 <template>
   <main class="home-page">
-    <router-link to="/work/kia" style="float: right;">
-      <img src="../assets/images/projects/kia.webp" alt="kia">
+    <router-link to="/work/kia" style="float: right;margin-top: 30px;">
+      <img src="/images/projects/kia.webp" alt="kia">
     </router-link>
-    <p>
-      <strong>Creative copywriter </strong>
+    <p style="text-align: center;">
       <router-link to="/work/wish">
-        <img src="../assets/images/projects/wish.gif" alt="wish" style="max-width: 240px;">
+        <img src="/images/projects/wish.gif" alt="wish" style="max-width: 240px;">
       </router-link>
     </p>
     <p>
+      <strong>Creative copywriter </strong>
+    </p>
+    <p>
       I have a <span class="second-font">unique & effective</span> style of work. Extensive
-      experience in digital: from <span class="second-font">social media</span> to
-      <span class="second-font">special projects</span>
+      experience in digital: from
+      <router-link to="/work/jbl" class="second-font">social media</router-link> to
+      <router-link to="/work/pepsico" class="second-font">special projects</router-link>
     </p>
     <p>
       <app-contact>
@@ -28,6 +31,7 @@
 <script setup>
 import AppBrands from '@/components/AppBrands.vue';
 import AppContact from '@/components/AppContact.vue';
+import { setPageTitle } from '@/utils/helpers';
 
-document.title = `MAIN — ${import.meta.env.VITE_SITE_NAME}`;
+setPageTitle(import.meta.env.VITE_PAGE_NAME_MAIN);
 </script>
