@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <main class="projects">
     <div class="projects__title">
       Selection of <span class="second-font">exciting</span> projects.
     </div>
@@ -47,7 +47,7 @@
         description="OLV"
       ></project-card>
     </div>
-  </div>
+  </main>
 </template>
 
 <script setup>
@@ -69,6 +69,15 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_WORK);
   &__item
     col()
     col-size(8)
+
+    @media (max-width 800px)
+      col-size(12)
+
+    @media (max-width 500px)
+      col-size(24)
+
+      &:nth-child(even)
+        text-align right
 
     &.double-col
       col-size(16)

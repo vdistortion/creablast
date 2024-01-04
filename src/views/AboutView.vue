@@ -58,6 +58,13 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_ABOUT);
   display flex
   column-gap 20px
 
+  @media (max-width 800px)
+    flex-direction column
+    row-gap 20px
+
+    &__item:first-child
+      text-align center
+
   img
     min-width 280px
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="video-project">
+  <main class="video-project">
     <div class="video-project__item">
       <youtube-video :id="videos[id]" :name="id"></youtube-video>
     </div>
@@ -79,7 +79,7 @@
         <p>The commercial turned out to have a second of tension, just like in real cinema.</p>
       </template>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -109,9 +109,15 @@ export default {
 .video-project
   row-flex()
 
+  @media (max-width 800px)
+    row-gap 20px
+
   &__item
     col()
     col-size(12)
+
+    @media (max-width 800px)
+      col-size(24)
 
   p:first-child
     margin-top 0

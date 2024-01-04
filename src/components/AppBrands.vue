@@ -1,37 +1,31 @@
 <template>
   <div class="brands">
-    <div class="brands__item">
-      <img src="/images/brands/jbl.webp" alt="jbl">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/google.webp" alt="google">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/haval.webp" alt="haval">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/kia.webp" alt="kia">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/ozon.webp" alt="ozon">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/luntik.webp" alt="luntik">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/perfetti.webp" alt="perfetti">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/abbott.webp" alt="abbott">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/squishmallows.webp" alt="squishmallows">
-    </div>
-    <div class="brands__item">
-      <img src="/images/brands/pepsico.webp" alt="pepsico">
+    <div
+      v-for="brand in brands"
+      :key="brand"
+      class="brands__item"
+      :class="{
+        desktop: desktopOnly.includes(brand),
+      }"
+    >
+      <img :src="`/images/brands/${brand}.webp`" :alt="brand">
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      brands: [
+        'jbl', 'google', 'haval', 'kia', 'ozon', 'luntik',
+        'perfetti', 'abbott', 'squishmallows', 'pepsico',
+      ],
+      desktopOnly: ['luntik'],
+    };
+  },
+};
+</script>
 
 <style lang="stylus">
 .brands
@@ -44,4 +38,14 @@
     col()
     col-size(4.8)
     text-align center
+    margin-bottom 10px
+
+    @media (max-width 800px)
+      col-size(6)
+
+    @media (max-width 500px)
+      col-size(8)
+
+      &.desktop
+        display none
 </style>
