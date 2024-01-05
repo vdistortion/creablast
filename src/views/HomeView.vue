@@ -40,10 +40,18 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_MAIN);
 .home-page
   display flex
   column-gap 20px
+  background-image url('/images/bg/12.webp'), url('/images/bg/3.webp')
+  background-repeat no-repeat
+  background-position top right 70px, top 50px left 5%
+  background-size 400px, 50px
 
   @media (max-width 800px)
+    background-position top right 70px, bottom 100px left 5%
     flex-direction column
     row-gap 20px
+
+  @media (max-width 500px)
+    background-position bottom -30px left 5%, top 10% right
 
   &__img.top
     display block

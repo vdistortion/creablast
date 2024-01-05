@@ -27,8 +27,17 @@ const siteName = import.meta.env.VITE_SITE_NAME;
     font-family $FONT_SECOND
     text-transform uppercase
     font-size 110px
+    margin-top 50px
 
-    @media (max-width 800px)
+    &::before
+      content url('/images/bg/4.webp')
+      position relative
+      bottom 50px
+
+    @media (max-width 900px)
       margin-top 10px
       font-size 50px
+
+      &::before
+        display none
 </style>

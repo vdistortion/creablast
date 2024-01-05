@@ -57,6 +57,10 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_ABOUT);
   font-size 16px
   display flex
   column-gap 20px
+  background-image url('/images/bg/12.webp')
+  background-repeat no-repeat
+  background-position right -30px bottom -10px
+  padding-bottom 130px
 
   @media (max-width 800px)
     flex-direction column
@@ -64,6 +68,13 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_ABOUT);
 
     &__item:first-child
       text-align center
+
+  @media (max-width 800px)
+    background-position right -30px bottom -10px
+    padding-bottom 300px
+
+  @media (max-width 400px)
+    background-size 320px
 
   img
     min-width 280px

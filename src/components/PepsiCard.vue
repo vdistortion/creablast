@@ -27,10 +27,17 @@ const pptx = import.meta.env.VITE_LINK_PPTX;
 .pepsico
   display flex
   column-gap 20px
+  background-image url('/images/bg/12.webp')
+  background-repeat no-repeat
+  background-position left bottom
 
   @media (max-width 800px)
+    background-position left bottom 10%
     flex-direction column
     row-gap 20px
+
+  @media (max-width 400px)
+    background-size 320px
 
   &__img.bottom
     display block

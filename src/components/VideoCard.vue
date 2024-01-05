@@ -108,9 +108,18 @@ export default {
 <style lang="stylus">
 .video-project
   row-flex()
+  padding-bottom 100px
+  background-image url('/images/bg/12.webp'), url('/images/bg/3.webp')
+  background-repeat no-repeat
+  background-position left 15% bottom, right bottom
+  background-size 300px, 100px
 
   @media (max-width 800px)
     row-gap 20px
+    background-image url('/images/bg/3.webp')
+    padding-bottom 150px
+    background-position center bottom
+    background-size 100px
 
   &__item
     col()

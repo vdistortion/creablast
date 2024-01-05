@@ -1,7 +1,9 @@
 <template>
   <main class="projects">
     <div class="projects__title">
-      Selection of <span class="second-font">exciting</span> projects.
+      <span>
+        Selection of <span class="second-font">exciting</span> projects.
+      </span>
     </div>
     <div class="projects__container">
       <project-card
@@ -60,11 +62,39 @@ setPageTitle(import.meta.env.VITE_PAGE_NAME_WORK);
 <style lang="stylus">
 .projects
   &__title
-    text-align right
+    display inline-flex
+    align-items center
+    justify-content flex-end
+    width 100%
     margin-bottom 20px
+
+    &::before
+      content ''
+      display inline-block
+      background-image url('/images/bg/3.webp')
+      background-repeat no-repeat
+      background-size contain
+      width: 130px
+      height: 172px
 
   &__container
     row-flex()
+    background-image url('/images/bg/12.webp')
+    background-repeat no-repeat
+    background-position left 70% bottom 0
+
+    @media (max-width 800px)
+      background-image url('/images/bg/12.webp'), url('/images/bg/3.webp')
+      background-position left 30% top 70%, right 10% top 20%
+      background-size 400px, 100px
+
+    @media (max-width 500px)
+      background-position right -40px top 40%, left 10% top 60%
+
+    @media (max-width 400px)
+      background-image url('/images/bg/12.webp')
+      background-position left 0 top 60%
+      background-size 320px
 
   &__item
     col()
