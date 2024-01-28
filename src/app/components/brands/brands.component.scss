@@ -1,0 +1,27 @@
+@import '../../../smartgrid';
+
+.brands {
+  @include row-flex();
+  margin-top: 90px;
+  margin-bottom: 20px;
+  filter: grayscale(100%);
+
+  &__item {
+    @include col();
+    @include col-size(4.8);
+    text-align: center;
+    margin-bottom: 10px;
+
+    @media (max-width: 800px) {
+      @include col-size(6);
+    }
+
+    @media (max-width: 500px) {
+      @include col-size(8);
+
+      &.desktop {
+        display: none;
+      }
+    }
+  }
+}

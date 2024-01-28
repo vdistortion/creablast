@@ -1,0 +1,55 @@
+@import '../../../variables';
+
+.navigation {
+  &__button {
+    display: none;
+    cursor: pointer;
+
+    @media (max-width: 800px) {
+      display: block;
+      position: relative;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__menu {
+    list-style-type: none;
+    padding-left: 0;
+    color: $COLOR_RED;
+    text-transform: uppercase;
+    font-size: 30px;
+
+    @media (max-width: 800px) {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background-color: $COLOR_BG;
+      margin: 0;
+      padding-top: 60px;
+      text-align: center;
+
+      &.open-mobile-menu {
+        display: initial;
+      }
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    a {
+      text-decoration: none;
+
+      &.active {
+        color: initial;
+        cursor: default;
+      }
+    }
+  }
+}

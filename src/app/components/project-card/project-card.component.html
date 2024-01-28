@@ -1,0 +1,7 @@
+<div class="card">
+  <a [routerLink]="'/work/' + name">
+    <img [src]="'/assets/images/projects/' + image" [alt]="name" />
+  </a>
+  <div class="card__description">{{ description }}</div>
+  <a [routerLink]="'/work/' + name">{{ link }}</a>
+</div>

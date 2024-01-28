@@ -1,0 +1,11 @@
+@import '../../../variables';
+
+.card {
+  margin-bottom: 30px;
+  font-size: 15px;
+
+  &__description {
+    font-family: $FONT_SECOND;
+    margin: 10px 0 5px;
+  }
+}
