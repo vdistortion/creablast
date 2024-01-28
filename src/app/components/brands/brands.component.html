@@ -1,0 +1,12 @@
+<div class="brands">
+  @for (brand of brands; track brand) {
+    <div
+      class="brands__item"
+      [ngClass]="{
+        desktop: desktopOnly.includes(brand)
+      }"
+    >
+      <img [src]="'/assets/images/brands/' + brand + '.webp'" [alt]="brand" />
+    </div>
+  }
+</div>

@@ -1,0 +1,70 @@
+@import '../../../smartgrid';
+
+.projects {
+  &__title {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      background-image: url('/assets/images/bg/3.webp');
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 130px;
+      height: 172px;
+    }
+  }
+
+  &__container {
+    @include row-flex();
+    background-image: url('/assets/images/bg/12.webp');
+    background-repeat: no-repeat;
+    background-position: left 70% bottom 0;
+
+    @media (max-width: 800px) {
+      background-image: url('/assets/images/bg/12.webp'),
+        url('/assets/images/bg/3.webp');
+      background-position:
+        left 30% top 70%,
+        right 10% top 20%;
+      background-size: 400px, 100px;
+    }
+
+    @media (max-width: 500px) {
+      background-position:
+        right -40px top 40%,
+        left 10% top 60%;
+    }
+
+    @media (max-width: 400px) {
+      background-image: url('/assets/images/bg/12.webp');
+      background-position: left 0 top 60%;
+      background-size: 320px;
+    }
+  }
+
+  &__item {
+    @include col();
+    @include col-size(8);
+
+    @media (max-width: 800px) {
+      @include col-size(12);
+    }
+
+    @media (max-width: 500px) {
+      @include col-size(24);
+
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    &.double-col {
+      @include col-size(16);
+    }
+  }
+}

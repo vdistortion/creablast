@@ -1,0 +1,40 @@
+<nav class="navigation">
+  <ul
+    class="navigation__menu"
+    [ngClass]="{
+      'open-mobile-menu': mobileMenu
+    }"
+  >
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{ pageNameMain }}</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/work"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{ pageNameWork }}</a
+      >
+    </li>
+    <li>
+      <a
+        routerLink="/about"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{ pageNameAbout }}</a
+      >
+    </li>
+  </ul>
+  <app-nav-btn
+    class="navigation__button"
+    (click)="mobileMenu = !mobileMenu"
+  ></app-nav-btn>
+</nav>
