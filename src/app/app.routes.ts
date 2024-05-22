@@ -18,7 +18,6 @@ export const routes: Routes = [
   },
   {
     path: 'work/:id',
-    title: `Project — ${environment.SITE_NAME}`,
     component: ProjectPageComponent,
   },
   {
