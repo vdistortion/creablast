@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgClass } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavBtnComponent } from '../svg/nav-btn/nav-btn.component';
 import { environment } from '../../../environments/environment';
@@ -7,7 +6,7 @@ import { environment } from '../../../environments/environment';
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [NavBtnComponent, RouterLink, NgClass, RouterLinkActive],
+  imports: [NavBtnComponent, RouterLink, RouterLinkActive],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })

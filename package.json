@@ -8,6 +8,7 @@
     "build": "ng build && cd dist/creablast/browser && cp index.html 404.html",
     "watch": "ng build --watch --configuration development",
     "public": "npm run build && gh-pages -d dist/creablast/browser --nojekyll --cname creablast.ru",
+    "grid": "tsx grid.ts && npx sass-migrator division src/_smartgrid.scss && prettier --write src/_smartgrid.scss",
     "format": "prettier --write src"
   },
   "private": true,
@@ -39,6 +40,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.2.4",
     "smart-grid": "^2.1.2",
+    "tsx": "^4.13.3",
     "typescript": "~5.3.2"
   }
 }

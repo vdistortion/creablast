@@ -40,7 +40,7 @@
     background-repeat: no-repeat;
     background-size: 25px 27px;
     font-size: 15px;
-    font-family: $FONT_SECOND;
-    color: $COLOR_RED;
+    font-family: var(--font-second);
+    color: var(--color-red);
   }
 }

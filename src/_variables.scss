@@ -1,7 +1,8 @@
-// fonts
-$FONT_MAIN: 'Montserrat', sans-serif;
-$FONT_SECOND: 'Mak', sans-serif;
-
-// colors
-$COLOR_BG: rgb(251, 233, 238);
-$COLOR_RED: rgb(226, 43, 35);
+:root {
+  // fonts
+  --font-main: 'Montserrat', sans-serif;
+  --font-second: 'Mak', sans-serif;
+  // colors
+  --color-bg: rgb(251, 233, 238);
+  --color-red: rgb(226, 43, 35);
+}

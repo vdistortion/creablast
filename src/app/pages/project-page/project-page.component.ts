@@ -14,8 +14,14 @@ import { environment } from '../../../environments/environment';
 export class ProjectPageComponent {
   public id: string | null;
 
-  constructor(private route: ActivatedRoute, private title: Title) {
+  constructor(
+    private route: ActivatedRoute,
+    private title: Title,
+  ) {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id) title.setTitle(`${this.id.toUpperCase()} — ${environment.SITE_NAME}`);
+    if (this.id)
+      this.title.setTitle(
+        `${this.id.toUpperCase()} — ${environment.SITE_NAME}`,
+      );
   }
 }

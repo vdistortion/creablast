@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-nav-btn',
+  selector: 'svg-nav-btn',
   standalone: true,
   imports: [],
-  templateUrl: './nav-btn.component.html',
+  templateUrl: './nav-btn.component.svg',
 })
 export class NavBtnComponent {}

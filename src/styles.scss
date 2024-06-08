@@ -4,8 +4,8 @@ body {
   margin: 0;
   font-size: 20px;
   min-width: 320px;
-  background-color: $COLOR_BG;
-  font-family: $FONT_MAIN;
+  background-color: var(--color-bg);
+  font-family: var(--font-main);
 
   main {
     margin-bottom: 40px;
@@ -22,7 +22,7 @@ body {
   }
 
   .second-font {
-    font-family: $FONT_SECOND;
+    font-family: var(--font-second);
     font-weight: 700;
   }
 

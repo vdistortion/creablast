@@ -5,7 +5,7 @@
   font-size: 15px;
 
   &__description {
-    font-family: $FONT_SECOND;
+    font-family: var(--font-second);
     margin: 10px 0 5px;
   }
 }

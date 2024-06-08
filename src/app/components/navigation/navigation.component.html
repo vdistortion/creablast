@@ -1,9 +1,7 @@
 <nav class="navigation">
   <ul
     class="navigation__menu"
-    [ngClass]="{
-      'open-mobile-menu': mobileMenu
-    }"
+    [class.open-mobile-menu]="mobileMenu"
   >
     <li>
       <a
@@ -33,8 +31,8 @@
       >
     </li>
   </ul>
-  <app-nav-btn
+  <svg-nav-btn
     class="navigation__button"
     (click)="mobileMenu = !mobileMenu"
-  ></app-nav-btn>
+  ></svg-nav-btn>
 </nav>
