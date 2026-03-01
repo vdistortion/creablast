@@ -7,7 +7,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-project-page',
-  standalone: true,
   imports: [PepsiCardComponent, VideoCardComponent],
   templateUrl: './project-page.component.html',
 })
@@ -19,9 +18,6 @@ export class ProjectPageComponent {
     private title: Title,
   ) {
     this.id = this.route.snapshot.paramMap.get('id');
-    if (this.id)
-      this.title.setTitle(
-        `${this.id.toUpperCase()} — ${environment.SITE_NAME}`,
-      );
+    if (this.id) this.title.setTitle(`${this.id.toUpperCase()} — ${environment.SITE_NAME}`);
   }
 }

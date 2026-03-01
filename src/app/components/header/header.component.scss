@@ -1,4 +1,4 @@
-@import '../../../variables';
+@use '../../../variables';
 
 .header {
   display: flex;
@@ -18,7 +18,7 @@
     font-size: 110px;
 
     &::before {
-      content: url('/assets/images/bg/4.webp');
+      content: url('/images/bg/4.webp');
       position: relative;
       bottom: 50px;
     }

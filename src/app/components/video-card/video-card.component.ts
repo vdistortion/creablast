@@ -3,13 +3,12 @@ import { YouTubePlayer } from '@angular/youtube-player';
 
 @Component({
   selector: 'app-video-card',
-  standalone: true,
   imports: [YouTubePlayer],
   templateUrl: './video-card.component.html',
   styleUrl: './video-card.component.scss',
 })
 export class VideoCardComponent {
-  @Input({ required: true }) id: string | null;
+  @Input({ required: true }) id!: string | null;
 
   public videos: any = {
     wish: 'ucEP9Of57Xg',
