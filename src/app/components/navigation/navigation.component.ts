@@ -5,7 +5,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-navigation',
-  standalone: true,
   imports: [NavBtnComponent, RouterLink, RouterLinkActive],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',

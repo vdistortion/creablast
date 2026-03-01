@@ -6,7 +6,6 @@ import { ContactComponent } from '../../components/contact/contact.component';
 
 @Component({
   selector: 'app-main-page',
-  standalone: true,
   imports: [BrandsComponent, ContactComponent, RouterLink, NgOptimizedImage],
   templateUrl: './main-page.component.html',
   styleUrl: './main-page.component.scss',

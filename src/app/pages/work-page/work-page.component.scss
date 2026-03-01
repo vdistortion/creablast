@@ -1,4 +1,4 @@
-@import '../../../smartgrid';
+@use '../../../smartgrid';
 
 .projects {
   &__title {
@@ -11,7 +11,7 @@
     &::before {
       content: '';
       display: inline-block;
-      background-image: url('/assets/images/bg/3.webp');
+      background-image: url('/images/bg/3.webp');
       background-repeat: no-repeat;
       background-size: contain;
       width: 130px;
@@ -20,14 +20,13 @@
   }
 
   &__container {
-    @include row-flex();
-    background-image: url('/assets/images/bg/12.webp');
+    @include smartgrid.row-flex();
+    background-image: url('/images/bg/12.webp');
     background-repeat: no-repeat;
     background-position: left 70% bottom 0;
 
     @media (max-width: 800px) {
-      background-image: url('/assets/images/bg/12.webp'),
-        url('/assets/images/bg/3.webp');
+      background-image: url('/images/bg/12.webp'), url('/images/bg/3.webp');
       background-position:
         left 30% top 70%,
         right 10% top 20%;
@@ -41,22 +40,22 @@
     }
 
     @media (max-width: 400px) {
-      background-image: url('/assets/images/bg/12.webp');
+      background-image: url('/images/bg/12.webp');
       background-position: left 0 top 60%;
       background-size: 320px;
     }
   }
 
   &__item {
-    @include col();
-    @include col-size(8);
+    @include smartgrid.col();
+    @include smartgrid.col-size(8);
 
     @media (max-width: 800px) {
-      @include col-size(12);
+      @include smartgrid.col-size(12);
     }
 
     @media (max-width: 500px) {
-      @include col-size(24);
+      @include smartgrid.col-size(24);
 
       &:nth-child(even) {
         text-align: right;
@@ -64,7 +63,7 @@
     }
 
     &.double-col {
-      @include col-size(16);
+      @include smartgrid.col-size(16);
     }
   }
 }

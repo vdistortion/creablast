@@ -3,7 +3,6 @@ import { ProjectCardComponent } from '../../components/project-card/project-card
 
 @Component({
   selector: 'app-work-page',
-  standalone: true,
   imports: [ProjectCardComponent],
   templateUrl: './work-page.component.html',
   styleUrl: './work-page.component.scss',

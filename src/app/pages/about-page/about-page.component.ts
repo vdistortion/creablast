@@ -5,7 +5,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-about-page',
-  standalone: true,
   imports: [ContactComponent, NgOptimizedImage],
   templateUrl: './about-page.component.html',
   styleUrl: './about-page.component.scss',

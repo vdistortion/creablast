@@ -4,7 +4,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
   imports: [NavigationComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

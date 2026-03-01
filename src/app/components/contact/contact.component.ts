@@ -3,7 +3,6 @@ import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
   imports: [],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',

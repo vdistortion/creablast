@@ -1,4 +1,6 @@
-@import 'fonts', 'variables', 'smartgrid';
+@use 'fonts';
+@use 'variables';
+@use 'smartgrid';
 
 body {
   margin: 0;
@@ -27,7 +29,7 @@ body {
   }
 
   .wrapper {
-    @include wrapper();
+    @include smartgrid.wrapper();
   }
 
   .youtube-player {

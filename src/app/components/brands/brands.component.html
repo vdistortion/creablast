@@ -1,10 +1,7 @@
 <div class="brands">
   @for (brand of brands; track brand) {
-    <div
-      class="brands__item"
-      [class.desktop]="desktopOnly.includes(brand)"
-    >
-      <img [src]="'/assets/images/brands/' + brand + '.webp'" [alt]="brand" />
+    <div class="brands__item" [class.desktop]="desktopOnly.includes(brand)">
+      <img [src]="'/images/brands/' + brand + '.webp'" [alt]="brand" />
     </div>
   }
 </div>

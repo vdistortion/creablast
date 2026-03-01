@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-brands',
-  standalone: true,
-  imports: [NgOptimizedImage],
+  imports: [],
   templateUrl: './brands.component.html',
   styleUrl: './brands.component.scss',
 })

@@ -1,8 +1,5 @@
 <nav class="navigation">
-  <ul
-    class="navigation__menu"
-    [class.open-mobile-menu]="mobileMenu"
-  >
+  <ul class="navigation__menu" [class.open-mobile-menu]="mobileMenu">
     <li>
       <a
         routerLink=""
@@ -31,8 +28,5 @@
       >
     </li>
   </ul>
-  <svg-nav-btn
-    class="navigation__button"
-    (click)="mobileMenu = !mobileMenu"
-  ></svg-nav-btn>
+  <svg-nav-btn class="navigation__button" (click)="mobileMenu = !mobileMenu"></svg-nav-btn>
 </nav>
