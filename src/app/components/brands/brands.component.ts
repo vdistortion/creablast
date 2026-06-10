@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './brands.component.scss',
 })
 export class BrandsComponent {
-  public brands: string[] = [
+  public brands = [
     'jbl',
     'google',
     'haval',
@@ -19,5 +19,5 @@ export class BrandsComponent {
     'squishmallows',
     'pepsico',
   ];
-  public desktopOnly: string[] = ['luntik'];
+  public desktopOnly = ['luntik'];
 }

@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import type { Routes } from '@angular/router';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { WorkPageComponent } from './pages/work-page/work-page.component';
 import { ProjectPageComponent } from './pages/project-page/project-page.component';
