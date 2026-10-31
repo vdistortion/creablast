@@ -1,18 +1,12 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
+import { projects } from './content/projects';
 
 export const serverRoutes: ServerRoute[] = [
   {
     path: 'work/:id',
     renderMode: RenderMode.Prerender,
     async getPrerenderParams() {
-      return [
-        { id: 'pepsico' },
-        { id: 'wish' },
-        { id: 'jbl' },
-        { id: 'kia' },
-        { id: 'meller' },
-        { id: 'afcon' },
-      ];
+      return projects.map(({ id }) => ({ id }));
     },
   },
   {

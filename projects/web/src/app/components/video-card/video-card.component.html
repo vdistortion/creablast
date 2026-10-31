@@ -1,11 +1,9 @@
 <main class="video-project">
-  @if (id) {
-    <div class="video-project__item">
-      <youtube-player class="youtube-player" [videoId]="videos[id]"></youtube-player>
-    </div>
-  }
   <div class="video-project__item">
-    @if (id === 'wish') {
+    <youtube-player class="youtube-player" [videoId]="project().videoId"></youtube-player>
+  </div>
+  <div class="video-project__item">
+    @if (project().id === 'wish') {
       <p>The first round task of Young Glory was dedicated to COVID restrictions and Christmas.</p>
       <p>
         The theme was <span class="second-font">great</span>, so my partner and I submitted several
@@ -19,7 +17,7 @@
       <p>But now I <span class="second-font">can assemble</span> them easily.</p>
       <p>And, btw, we won bronze in this round.</p>
       <div class="gift">Young Glory 1st round BRONZE</div>
-    } @else if (id === 'jbl') {
+    } @else if (project().id === 'jbl') {
       <p>
         I love this project wholeheartedly, partly because I worked on it
         <span class="second-font">alone</span> from the creative team.
@@ -31,7 +29,7 @@
       <p>
         It was possible to cover both the brand's history and typical newsmakers like Halloween.
       </p>
-    } @else if (id === 'kia') {
+    } @else if (project().id === 'kia') {
       <p>
         Working with
         <span class="second-font">bloggers and celebrities</span> is always a
@@ -49,7 +47,7 @@
       </p>
       <p>The project won numerous Russian awards and the love of the audience.</p>
       <div class="gift">Tagline, Silver Mercury, AKMR</div>
-    } @else if (id === 'afcon') {
+    } @else if (project().id === 'afcon') {
       <p>
         I don't like football, and I knew almost nothing about the African league, so when I saw
         this task, I
@@ -63,7 +61,7 @@
         Now, of course, NFT is no longer relevant.
       </p>
       <div class="gift">Young Glory 7th round BRONZE</div>
-    } @else if (id === 'meller') {
+    } @else if (project().id === 'meller') {
       <p>
         Meller commercials are always like a short
         <span class="second-font">movie</span>.

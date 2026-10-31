@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { Project } from '../../content/projects';
 
 @Component({
   selector: 'app-project-card',
@@ -8,8 +9,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './project-card.component.scss',
 })
 export class ProjectCardComponent {
-  @Input({ required: true }) image!: string;
-  @Input({ required: true }) name!: string;
-  @Input({ required: true }) description!: string;
-  @Input({ required: true }) link!: string;
+  readonly project = input.required<Project>();
 }
