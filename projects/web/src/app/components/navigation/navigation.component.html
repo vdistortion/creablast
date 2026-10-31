@@ -1,9 +1,10 @@
-<nav class="navigation">
-  <ul class="navigation__menu" [class.open-mobile-menu]="mobileMenu">
+<nav class="navigation" aria-label="Main navigation">
+  <ul id="navigation-menu" class="navigation__menu" [class.open-mobile-menu]="mobileMenu()">
     <li>
       <a
         routerLink=""
         routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeMenu()"
         >{{ pageNameMain }}</a
@@ -13,6 +14,7 @@
       <a
         routerLink="/work"
         routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeMenu()"
         >{{ pageNameWork }}</a
@@ -22,11 +24,22 @@
       <a
         routerLink="/about"
         routerLinkActive="active"
+        ariaCurrentWhenActive="page"
         [routerLinkActiveOptions]="{ exact: true }"
         (click)="closeMenu()"
         >{{ pageNameAbout }}</a
       >
     </li>
   </ul>
-  <svg-nav-btn class="navigation__button" (click)="mobileMenu = !mobileMenu"></svg-nav-btn>
+  <button
+    #toggleButton
+    class="navigation__button"
+    type="button"
+    aria-controls="navigation-menu"
+    [attr.aria-expanded]="mobileMenu()"
+    [attr.aria-label]="mobileMenu() ? 'Close navigation' : 'Open navigation'"
+    (click)="toggleMenu()"
+  >
+    <svg-nav-btn [open]="mobileMenu()"></svg-nav-btn>
+  </button>
 </nav>

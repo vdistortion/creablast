@@ -1,9 +1,15 @@
-@use '../../../variables';
-
 .navigation {
   &__button {
     display: none;
     cursor: pointer;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--color-red);
+
+    svg-nav-btn {
+      display: block;
+    }
 
     @media (max-width: 800px) {
       display: block;
@@ -33,6 +39,7 @@
       margin: 0;
       padding-top: 60px;
       text-align: center;
+      overflow-y: auto;
 
       &.open-mobile-menu {
         display: initial;
