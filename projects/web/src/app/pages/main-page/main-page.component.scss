@@ -1,4 +1,9 @@
 .home-page {
+  &__heading {
+    font-size: inherit;
+    margin: 1em 0;
+  }
+
   display: grid;
   grid-template-columns: minmax(0, 1fr) 346px;
   gap: 20px;

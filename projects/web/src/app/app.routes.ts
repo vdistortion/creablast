@@ -13,11 +13,19 @@ export const routes: Routes = [
     path: '',
     title: `${environment.PAGE_NAME_MAIN} — ${environment.SITE_NAME}`,
     component: MainPageComponent,
+    data: {
+      description:
+        'Enesha — creative copywriter. Digital campaigns, social media and special projects.',
+    },
   },
   {
     path: 'work',
     title: `${environment.PAGE_NAME_WORK} — ${environment.SITE_NAME}`,
     component: WorkPageComponent,
+    data: {
+      description:
+        'Selected creative projects by Enesha: campaigns for Wish, JBL, KIA, Pepsico and more.',
+    },
   },
   {
     path: 'work/:id',
@@ -34,15 +42,27 @@ export const routes: Routes = [
     path: 'about',
     title: `${environment.PAGE_NAME_ABOUT} — ${environment.SITE_NAME}`,
     component: AboutPageComponent,
+    data: {
+      description:
+        'Meet Enesha, creative copywriter: advertising education, agency experience and creative awards.',
+    },
   },
   {
     path: 'not-found',
     title: `Page not found — ${environment.SITE_NAME}`,
     component: NotFoundPageComponent,
+    data: {
+      noindex: true,
+      description: 'This page could not be found. Explore projects by Enesha.',
+    },
   },
   {
     path: '**',
     title: `Page not found — ${environment.SITE_NAME}`,
     component: NotFoundPageComponent,
+    data: {
+      noindex: true,
+      description: 'This page could not be found. Explore projects by Enesha.',
+    },
   },
 ];

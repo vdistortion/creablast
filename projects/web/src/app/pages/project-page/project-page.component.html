@@ -1,7 +1,10 @@
 @if (project(); as project) {
-  @if (project.kind === 'presentation') {
-    <app-pepsi-card></app-pepsi-card>
-  } @else {
-    <app-video-card [project]="project"></app-video-card>
-  }
+  <main>
+    <h1 class="visually-hidden">{{ project.title }}</h1>
+    @if (project.kind === 'presentation') {
+      <app-pepsi-card></app-pepsi-card>
+    } @else {
+      <app-video-card [project]="project"></app-video-card>
+    }
+  </main>
 }

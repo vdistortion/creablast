@@ -1,5 +1,6 @@
 export const environment = {
   SITE_NAME: 'Enesha',
+  SITE_URL: 'https://creablast.ru',
   PAGE_NAME_MAIN: 'Main',
   PAGE_NAME_WORK: 'Work',
   PAGE_NAME_ABOUT: 'About me',

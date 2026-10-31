@@ -1,7 +1,7 @@
 <main class="projects">
-  <div class="projects__title">
+  <h1 class="projects__title">
     <span> Selection of <span class="second-font">exciting</span> projects. </span>
-  </div>
+  </h1>
   <div class="projects__container">
     @for (project of projects; track project.id) {
       <app-project-card class="projects__item" [project]="project"></app-project-card>
