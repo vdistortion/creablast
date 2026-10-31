@@ -1,4 +1,5 @@
-import { Component, ElementRef, inject, signal, viewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, effect, ElementRef, inject, signal, viewChild } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NavBtnComponent } from '../svg/nav-btn/nav-btn.component';
 import { environment } from '../../../environments/environment';
@@ -21,8 +22,27 @@ export class NavigationComponent {
   public pageNameWork = environment.PAGE_NAME_WORK;
   public pageNameAbout = environment.PAGE_NAME_ABOUT;
   readonly mobileMenu = signal(false);
+  private readonly document = inject(DOCUMENT);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
   private readonly toggleButton = viewChild.required<ElementRef<HTMLButtonElement>>('toggleButton');
+
+  constructor() {
+    effect((onCleanup) => {
+      if (!this.mobileMenu()) return;
+
+      const style = this.document.body.style;
+      const overflow = style.getPropertyValue('overflow');
+      const priority = style.getPropertyPriority('overflow');
+      style.setProperty('overflow', 'hidden');
+      onCleanup(() => {
+        if (overflow) {
+          style.setProperty('overflow', overflow, priority);
+        } else {
+          style.removeProperty('overflow');
+        }
+      });
+    });
+  }
 
   toggleMenu(): void {
     if (this.mobileMenu()) {
@@ -35,13 +55,20 @@ export class NavigationComponent {
   closeMenu(): void {
     if (this.mobileMenu()) {
       this.mobileMenu.set(false);
-      this.toggleButton().nativeElement.focus();
+      this.toggleButton().nativeElement.focus({ preventScroll: true });
     }
   }
 
   onResize(event: Event): void {
-    if ((event.target as Window).innerWidth > 800) {
+    if ((event.target as Window).innerWidth > 800 && this.mobileMenu()) {
+      const focusedLink = this.host.nativeElement.querySelector('a:focus');
       this.mobileMenu.set(false);
+      if (!focusedLink) {
+        const link =
+          this.host.nativeElement.querySelector<HTMLAnchorElement>('a[aria-current="page"]') ??
+          this.host.nativeElement.querySelector<HTMLAnchorElement>('a');
+        link?.focus({ preventScroll: true });
+      }
     }
   }
 
