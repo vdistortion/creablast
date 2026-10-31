@@ -1,7 +1,14 @@
 <div class="brands">
-  @for (brand of brands; track brand) {
-    <div class="brands__item" [class.desktop]="desktopOnly.includes(brand)">
-      <img [src]="'/images/brands/' + brand + '.webp'" [alt]="brand" />
+  @for (brand of brands; track brand.id) {
+    <div class="brands__item" [class.desktop]="brand.desktopOnly">
+      <img
+        [src]="'/images/brands/' + brand.id + '.webp'"
+        [alt]="brand.id"
+        [width]="brand.width"
+        [height]="brand.height"
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   }
 </div>

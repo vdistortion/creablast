@@ -28,7 +28,13 @@ export const projects: readonly Project[] = [
     id: 'wish',
     title: 'Wish x Young Glory entrance',
     description: 'Christmas COVID special',
-    image: { src: 'wish.gif', width: 864, height: 864 },
+    image: {
+      src: 'wish-480.webp',
+      width: 480,
+      height: 480,
+      srcset:
+        '/images/projects/wish-320.webp 320w, /images/projects/wish-480.webp 480w, /images/projects/wish-864.webp 864w',
+    },
     kind: 'video',
     videoId: 'ucEP9Of57Xg',
   },
@@ -67,7 +73,13 @@ export const projects: readonly Project[] = [
     id: 'meller',
     title: 'Meller film',
     description: 'OLV',
-    image: { src: 'meller.gif', width: 864, height: 864 },
+    image: {
+      src: 'meller-480.webp',
+      width: 480,
+      height: 480,
+      srcset:
+        '/images/projects/meller-320.webp 320w, /images/projects/meller-480.webp 480w, /images/projects/meller-864.webp 864w',
+    },
     kind: 'video',
     videoId: '9ruI23-4Q_k',
   },
