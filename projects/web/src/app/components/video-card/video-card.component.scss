@@ -1,8 +1,7 @@
-@use '../../../variables';
-@use '../../../smartgrid';
-
 .video-project {
-  @include smartgrid.row-flex();
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   padding-bottom: 100px;
   background-image: url('/images/bg/12.webp'), url('/images/bg/3.webp');
   background-repeat: no-repeat;
@@ -12,7 +11,7 @@
   background-size: 300px, 100px;
 
   @media (max-width: 800px) {
-    row-gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
     background-image: url('/images/bg/3.webp');
     padding-bottom: 150px;
     background-position: center bottom;
@@ -20,12 +19,8 @@
   }
 
   &__item {
-    @include smartgrid.col();
-    @include smartgrid.col-size(12);
-
-    @media (max-width: 800px) {
-      @include smartgrid.col-size(24);
-    }
+    min-width: 0;
+    overflow-wrap: break-word;
   }
 
   p:first-child {

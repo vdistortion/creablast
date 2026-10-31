@@ -1,6 +1,7 @@
 .home-page {
-  display: flex;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 346px;
+  gap: 20px;
   background-image: url('/images/bg/12.webp'), url('/images/bg/3.webp');
   background-repeat: no-repeat;
   background-position:
@@ -12,8 +13,7 @@
     background-position:
       top right 70px,
       bottom 100px left 5%;
-    flex-direction: column;
-    row-gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   @media (max-width: 500px) {

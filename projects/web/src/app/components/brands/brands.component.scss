@@ -1,24 +1,24 @@
-@use '../../../smartgrid';
-
 .brands {
-  @include smartgrid.row-flex();
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px 20px;
   margin-top: 90px;
   margin-bottom: 20px;
   filter: grayscale(100%);
 
-  &__item {
-    @include smartgrid.col();
-    @include smartgrid.col-size(4.8);
-    text-align: center;
-    margin-bottom: 10px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 
-    @media (max-width: 800px) {
-      @include smartgrid.col-size(6);
-    }
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  &__item {
+    min-width: 0;
+    text-align: center;
 
     @media (max-width: 500px) {
-      @include smartgrid.col-size(8);
-
       &.desktop {
         display: none;
       }

@@ -1,14 +1,14 @@
 .pepsico {
-  display: flex;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 273px;
+  gap: 20px;
   background-image: url('/images/bg/12.webp');
   background-repeat: no-repeat;
   background-position: left bottom;
 
   @media (max-width: 800px) {
     background-position: left bottom 10%;
-    flex-direction: column;
-    row-gap: 20px;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   @media (max-width: 400px) {

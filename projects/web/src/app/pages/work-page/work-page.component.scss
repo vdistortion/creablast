@@ -1,5 +1,3 @@
-@use '../../../smartgrid';
-
 .projects {
   &__title {
     display: inline-flex;
@@ -20,12 +18,15 @@
   }
 
   &__container {
-    @include smartgrid.row-flex();
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
     background-image: url('/images/bg/12.webp');
     background-repeat: no-repeat;
     background-position: left 70% bottom 0;
 
     @media (max-width: 800px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       background-image: url('/images/bg/12.webp'), url('/images/bg/3.webp');
       background-position:
         left 30% top 70%,
@@ -34,6 +35,7 @@
     }
 
     @media (max-width: 500px) {
+      grid-template-columns: minmax(0, 1fr);
       background-position:
         right -40px top 40%,
         left 10% top 60%;
@@ -47,23 +49,13 @@
   }
 
   &__item {
-    @include smartgrid.col();
-    @include smartgrid.col-size(8);
-
-    @media (max-width: 800px) {
-      @include smartgrid.col-size(12);
-    }
+    min-width: 0;
+    overflow-wrap: break-word;
 
     @media (max-width: 500px) {
-      @include smartgrid.col-size(24);
-
       &:nth-child(even) {
         text-align: right;
       }
-    }
-
-    &.double-col {
-      @include smartgrid.col-size(16);
     }
   }
 }

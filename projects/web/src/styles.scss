@@ -1,6 +1,5 @@
 @use 'fonts';
 @use 'variables';
-@use 'smartgrid';
 
 body {
   margin: 0;
@@ -29,7 +28,9 @@ body {
   }
 
   .wrapper {
-    @include smartgrid.wrapper();
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   .youtube-player {
